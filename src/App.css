@@ -1,0 +1,9 @@
+div{    
+	background-color: #00274F;
+
+}
+main{
+	display: flex;
+	flex-direction: row;
+	gap: 1.875rem;
+}

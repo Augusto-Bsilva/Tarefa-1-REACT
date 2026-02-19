@@ -3,14 +3,23 @@ import type { PostProps } from '../../Types/Post'
 import { useState } from 'react'
 import MyComent from '../Coment'
 import MyPic from '../assets/IMG_4150.jpeg'
+import type Coment from '../../Types/Coment'
 
-export default function Post({  autorPic, name, cargo }:PostProps){
-    const [coments, setComents] = useState<string[]>([])
+export default function Post({  autorPic, name, cargo, comentsProntos=[] }:PostProps){
+    const [coments, setComents] = useState<Coment[]>(comentsProntos)
     const [coment,setComent] = useState('')
 
      function handleSubmit(e){
         e.preventDefault();
-        setComents([...coments, coment]);
+        
+        const novoComent:Coment={
+            id: Math.random(),
+            name:'Augusto',
+            text: coment,
+            autorPic:MyPic
+        }
+        
+        setComents([...coments, novoComent]);
         setComent('')
     }
 
@@ -18,9 +27,7 @@ export default function Post({  autorPic, name, cargo }:PostProps){
         setComent(e.target.value);
     }
      function handleDelete(id:number) {    
-        const updatedComents = coments.filter((coment,index)=>{
-            return index !== id;
-        })
+        const updatedComents = coments.filter(novoComent=>novoComent.id!==id)
         setComents(updatedComents)
      }
     
@@ -50,19 +57,21 @@ export default function Post({  autorPic, name, cargo }:PostProps){
             placeholder='Escreva um comentário...' 
             value={coment}
             onChange = {handleChange}
+            required
             />
             
             <button type='submit'>Comentar</button>
 
         </form>
         <div>
-            {coments.map((coment,index) => {
+            {coments.map((coment) => {
                 return (
                     <MyComent 
-                        id = {index}
-                        text= {coment}
-                        name = 'Augusto'
-                        autorPic={MyPic}
+                        id = {coment.id}
+                        key = {coment.id}
+                        text= {coment.text}
+                        name = {coment.name}
+                        autorPic={coment.autorPic}
                         apagarComent = {handleDelete}
                     />
                 )

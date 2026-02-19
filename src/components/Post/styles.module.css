@@ -27,6 +27,7 @@
     height:  4.5625rem;
     border: .3125rem solid #004B96;
     border-radius: 7.5rem;
+    object-fit: cover;
 }
 .profileData{
     display: flex;

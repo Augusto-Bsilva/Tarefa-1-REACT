@@ -151,4 +151,20 @@
     color: #CCCCCC;
     cursor:pointer;
 }
+.feedback>button:focus{
+    max-width: 8.6875rem;
+    width: 100%;
+    height: 2.9937rem;
+    margin-left: 2.5rem;
+    border-radius: .5rem;
+    background-color: #004B96;
+    border:none;
+    font-family:'Inter',sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    color: #CCCCCC;
+    cursor:pointer;
+    outline: none;
+}
 

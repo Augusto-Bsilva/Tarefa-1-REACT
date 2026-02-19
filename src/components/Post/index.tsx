@@ -16,6 +16,12 @@ export default function Post({  autorPic, name, cargo }:PostProps){
 
      function handleChange(e){
         setComent(e.target.value);
+    }
+     function handleDelete(id:number) {    
+        const updatedComents = coments.filter((coment,index)=>{
+            return index !== id;
+        })
+        setComents(updatedComents)
      }
     
     return(
@@ -53,10 +59,11 @@ export default function Post({  autorPic, name, cargo }:PostProps){
             {coments.map((coment,index) => {
                 return (
                     <MyComent 
-                        key = {index}
+                        id = {index}
                         text= {coment}
                         name = 'Augusto'
                         autorPic={MyPic}
+                        apagarComent = {handleDelete}
                     />
                 )
             }

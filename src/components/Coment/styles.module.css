@@ -91,12 +91,40 @@
 
 }
 .like{
-    width: 1.5rem;
-    height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    width: 6.5rem;
+    height: 3.5rem;
     background:none;
     border:none;
     cursor:pointer;
     margin-left: .625rem;
     margin-top: .5rem;
     padding: 0;
+    font-family:'Inter',sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 14px;
+    gap: 15px;
+    align-items: center;
+    color: #999999;
+}
+.liked{
+    display: flex;
+    flex-direction: row;
+    color:  #004B96;
+    width: 6.5rem;
+    height: 3.5rem;
+    background:none;
+    border:none;
+    margin-left: .625rem;
+    margin-top: .5rem;
+    padding: 0;
+    font-family:'Inter',sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 14px;
+    gap: 15px;
+    align-items: center;
+    text-decoration-style: dotted;
 }

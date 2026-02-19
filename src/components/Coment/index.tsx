@@ -15,7 +15,13 @@ interface MyComentProps{
 
 export default function MyComent({ id, autorPic, name, text }:MyComentProps){
     const [like,setLike] = useState(false);
-    const[counter, setCounter]
+    const[counter, setCounter] = useState(0);
+    
+    function handleClick(){
+        setCounter((currentState) => currentState+1)
+        setLike(!like)
+       
+    }
 
     return(
         <div className={style.comentBox}>
@@ -35,11 +41,13 @@ export default function MyComent({ id, autorPic, name, text }:MyComentProps){
                 </header>
                 <p className={style.coment}>{text}</p>
                 </div> 
+                
                 <button
-                    className={style.like}
-                    onClick={()=>setLike(!like)}>
+                    className={like?style.liked:style.like}
+                    onClick={handleClick}
+                    disabled = {like}>
                     <img src={like ? Liked : Like} />
-                    Like
+                    Like &bull; {counter}
                 </button>
             </div>
         </div>

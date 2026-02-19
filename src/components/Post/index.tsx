@@ -9,7 +9,8 @@ export default function Post({  autorPic, name, cargo, comentsProntos=[] }:PostP
     const [coments, setComents] = useState<Coment[]>(comentsProntos)
     const [coment,setComent] = useState('')
 
-     function handleSubmit(e){
+    
+    function handleSubmit(e){
         e.preventDefault();
         
         const novoComent:Coment={
@@ -23,13 +24,15 @@ export default function Post({  autorPic, name, cargo, comentsProntos=[] }:PostP
         setComent('')
     }
 
-     function handleChange(e){
+    function handleChange(e){
         setComent(e.target.value);
     }
-     function handleDelete(id:number) {    
+     
+    function handleDelete(id:number) {    
         const updatedComents = coments.filter(novoComent=>novoComent.id!==id)
         setComents(updatedComents)
-     }
+    }
+    
     
     return(
      <aside className={style.pub}>

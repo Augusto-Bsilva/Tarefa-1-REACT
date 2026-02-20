@@ -7,7 +7,7 @@ import type Coment from '../../Types/Coment'
 
 export default function Post({  autorPic, name, cargo, comentsProntos=[] }:PostProps){
     const [coments, setComents] = useState<Coment[]>(comentsProntos)
-    const [coment,setComent] = useState('')
+    const [coment,setComent] = useState<string>('')
 
     
     function handleSubmit(e){

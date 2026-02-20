@@ -54,7 +54,7 @@ export default function MyComent({ id, autorPic, name, text, apagarComent }:MyCo
                     onClick={handleClick}
                     disabled = {like}>
                     <img src={like ? Liked : Like} />
-                    Like&bull; {counter}
+                    Like &bull; {counter}
                 </button>
             </div>
         </div>

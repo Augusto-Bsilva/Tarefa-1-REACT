@@ -10,7 +10,7 @@ export default function Feed(){
                     id:1,
                     name:'Maria Célia',
                     autorPic:'https://as2.ftcdn.net/v2/jpg/04/07/34/77/1000_F_407347701_dejg4HjbiH2TLIYMkBUVdPsjVledmTGF.jpg',
-                    text:'Ótimo designe lobinho!'
+                    text:'Ótimo design lobinho!'
                 }
             ]}
             

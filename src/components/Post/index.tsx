@@ -2,7 +2,7 @@ import style from './styles.module.css'
 import type { PostProps } from '../../Types/Post'
 import { useState } from 'react'
 import MyComent from '../Coment'
-import MyPic from '../assets/IMG_4150.jpeg'
+import MyPic from '../../assets/IMG_4150.jpeg'
 import type Coment from '../../Types/Coment'
 
 export default function Post({  autorPic, name, cargo, comentsProntos=[] }:PostProps){

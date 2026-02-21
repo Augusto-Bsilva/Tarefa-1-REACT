@@ -1,6 +1,6 @@
 import style from './styles.module.css'
-import Background from '../assets/Bat.gif'
-import ProfilePic from '../assets/IMG_4150.jpeg'
+import Background from '../../assets/Bat.gif'
+import ProfilePic from '../../assets/IMG_4150.jpeg'
 
 export default function ProfileCard(){
     return(

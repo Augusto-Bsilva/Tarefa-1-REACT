@@ -1,7 +1,7 @@
 import style from  './styles.module.css'
-import Trash from '../assets/Trash.png'
-import Like from '../assets/Like.png'
-import Liked from '../assets/Like (1).png'
+import Trash from '../../assets/Trash.png'
+import Like from '../../assets/Like.png'
+import Liked from '../../assets/Like (1).png'
 import { useState } from 'react'
 interface MyComentProps{
     id: number;
